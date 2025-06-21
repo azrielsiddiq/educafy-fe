@@ -1,14 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Admin from '../views/Admin/Index.vue'
 import DashboardAdmin from '../views/Admin/Dashboard.vue'
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/admin/dashboard',
+            path: '/admin',
             name: 'Admin',
             redirect: { path: '/admin/dashboard'},  
-            component: DashboardAdmin,
+            component: Admin,
             children: [
                 {
                     path: '/admin/dashboard',
